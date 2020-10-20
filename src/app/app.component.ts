@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'travel-app';
+  title:string = 'Travel APP';
+  result:number = 0;
+  pass:number = 0;
+  origin:string = '';
+  destination:string = '';
+
+  calcPrice(): void {
+    this.result = this.pass * 150;
+  }
 }
