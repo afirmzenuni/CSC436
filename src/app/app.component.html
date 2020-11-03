@@ -1,26 +1,15 @@
-<form>
-  <br><br>
-  <div class="form-group row">
 
-    <div class="col">
-      <label for="origin">Origin: </label>
-      <input class="form-control" type="text" id="origin" [(ngModel)]="origin" name="origin">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+  <ul class="navbar-nav">
+    <div class = "navbar-header">
+      <a class="navbar-brand" [routerLink]="['/about-page']">Travel App</a>
     </div>
+    <a class="nav-link" [routerLink]="['/about-page']">About</a>
+    <a class="nav-link" [routerLink]="['/flight-price']">Flights</a>
+  </ul>
+</nav>
+<br />
+<br />
+<br />
 
-    <div class="col">
-     <label for="destination">Destination: </label>
-      <input class="form-control" type="text" id="destination">
-    </div>
-
-
-    <div class="col">
-      <label for="pasangers">Number of Pestination:</label>
-      <input class="form-control" id="pass" type="number" [(ngModel)]="pass" name="pass">
-    </div>
-
-  </div>
-  <div>
-    <input type="submit" class="btn btn-primary" (click)="calcPrice()">
-  </div>
-</form>
-{{"Price: "}}{{result}}
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1> Search For Flights</h1>
+
+  <form>
+    <br><br>
+    <div class="form-group row">
+
+      <div class="col">
+        <label for="origin">Origin: </label>
+        <input class="form-control" type="text" id="origin" [(ngModel)]="origin" name="origin">
+      </div>
+
+      <div class="col">
+      <label for="destination">Destination: </label>
+        <input class="form-control" type="text" id="destination">
+      </div>
+
+
+      <div class="col">
+        <label for="pasangers">Number of Pestination:</label>
+        <input class="form-control" id="pass" type="number" [(ngModel)]="pass" name="pass">
+      </div>
+
+    </div>
+    <div>
+      <input type="submit" class="btn btn-primary" (click)="calcPrice()">
+    </div>
+  </form>
+  <br>
+
+  {{"Price: "}}{{result}}
+</div>
